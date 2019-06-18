@@ -32,6 +32,19 @@ module.exports = appInfo => {
     // operatorsAliases: false,
   }
 
+ //跨域配置
+ config.security = {
+  csrf: {
+    enable: false,
+    ignoreJSON: true
+  },
+  domainWhiteList: ['http://www.baidu.com', 'http://localhost:8080'], //配置白名单
+};
+
+config.cors = {
+  // origin: '*', //允许所有跨域访问，注释掉则允许上面 白名单 访问
+  allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+}
   return {
     ...config,
     ...userConfig,
