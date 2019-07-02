@@ -3,10 +3,7 @@
 const Controller = require('egg').Controller;
 
 class CourseController extends Controller {
-    // async  index() {
-    //     const course = await this.ctx.service.course.getcourse();
-    //     this.ctx.body = course;
-    // }
+
     async get() {
         const course = await this.ctx.service.course.getcourse();
         this.ctx.body = course
