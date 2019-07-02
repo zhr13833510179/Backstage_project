@@ -4,10 +4,14 @@ module.exports = app => {
     } = app.Sequelize;
 
     const StudentList = app.model.define('studentList', {
-        clazzs: STRING,
         students: STRING,
-        studentlnformation: STRING,
 
     })
+    StudentList.associate = function () {
+        app.model.StudentList.belongsTo(app.model.ClazzsList, {  //设置外键
+            foreignKey: 'clazzsList_id',
+            as: 'clazzsList'
+        })
+    }
     return StudentList;
 }

@@ -7,5 +7,6 @@ module.exports = app => {
         everyExam: STRING,
         achievement: STRING,
     })
+    
     return Success ;
 }

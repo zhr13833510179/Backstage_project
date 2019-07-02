@@ -38,7 +38,7 @@ module.exports = appInfo => {
     enable: false,
     ignoreJSON: true
   },
-  domainWhiteList: ['http://www.baidu.com', 'http://localhost:8080'], //配置白名单
+  domainWhiteList: ['http://localhost:8081', 'http://localhost:8080'], //配置白名单
 };
 
 config.cors = {

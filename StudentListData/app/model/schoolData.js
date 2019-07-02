@@ -7,5 +7,6 @@ module.exports = app => {
         brieflntroduction: STRING,
         address: STRING,
     })
+
     return SchoolData ;
 }

@@ -4,7 +4,8 @@ module.exports = app => {
     } = app.Sequelize;
 
     const ClazzsList = app.model.define('clazzsList', {
-        name: STRING,
+        classes: STRING,
+        teacher: STRING
     })
-    return ClazzsList ;
+    return ClazzsList;
 }

@@ -3,19 +3,21 @@
 const Controller = require('egg').Controller;
 
 class ClazzlistController extends Controller {
-  async index() {
-    const clazzList = await this.app.model.ClazzsList.findAll();
-    console.log(clazzList)
+  async get() {
+    const clazzList = await this.ctx.service.clazzlist.getclazz();
     this.ctx.body = clazzList
   }
   async post() {
-    let name = this.ctx.request.body;
-    const sudent = {
-        name:name.name
-    }
-    await this.app.model.ClazzsList.create(sudent);
+    const clazzList = await this.ctx.service.clazzlist.postclazz();
     this.ctx.body = clazzList
-
+  }
+  async delete() {
+    const clazzList = await this.ctx.service.clazzlist.deleteclazz();
+    this.ctx.body = clazzList
+  }
+  async put() {
+    const clazzList = await this.ctx.service.clazzlist.putclazz();
+    this.ctx.boyd = clazzList
   }
 }
 

@@ -7,5 +7,6 @@ module.exports = app => {
         major: STRING,
         curriculum: STRING,
     })
+   
     return Course ;
 }

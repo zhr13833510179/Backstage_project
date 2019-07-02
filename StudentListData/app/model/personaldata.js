@@ -10,5 +10,6 @@ module.exports = app => {
         personallnformation: STRING,
 
     })
+    
     return Personaldata ;
 }
